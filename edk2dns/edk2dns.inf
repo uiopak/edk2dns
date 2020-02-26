@@ -1,0 +1,49 @@
+## @file
+#  Brief Description of UEFI edk2dns
+#  
+#
+#  Copyright for UEFI  edk2dns
+#  
+#  License for UEFI  edk2dns
+#  
+##
+
+[Defines]
+  INF_VERSION                    = 1.25
+  BASE_NAME                      = edk2dns
+  FILE_GUID                      = b709977f-e306-47a9-8061-ea4df4cfef56
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = edk2dns
+#
+# The following information is for reference only and not required by the build tools.
+#
+#  VALID_ARCHITECTURES           = IA32 X64 IPF EBC Etc...
+#
+
+[Sources]
+  edk2dns.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  MemoryAllocationLib
+  BaseMemoryLib
+  BaseLib
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  
+[Guids]
+
+[Ppis]
+
+[Protocols]
+gEfiDns4ProtocolGuid
+gEfiDns4ServiceBindingProtocolGuid
+
+[FeaturePcd]
+
+[Pcd]
